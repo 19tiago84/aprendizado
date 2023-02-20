@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Assíncrono</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const url = "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
+
+        function carregarCursosXMLHttp(){
+            let req = new XMLHttpRequest();
+            req.responseType = 'json'
+            req.open("GET",url);
+            req.onload = () => {
+                let response = req.response;
+                console.log("requisição com XMLHttp", response);
+            }
+
+            req.send(null);
+        }
+
+        carregarCursosXMLHttp();
+
+        function carregarComFetch(){
+            fetch(url)
+            .then(response => response.json())
+            .then(json => {
+                console.log("requisição com fetch",json);
+            })
+            .catch(error => console.error("Houve algum erro ao consultar a API"+error))
+        }
+        carregarComFetch();
+
+        //Melhor opção para não concatenar vários then
+        async function carregarComAsyncAwait(){
+            try{
+                const response = await fetch(url);
+                const json = await response.json();
+                console.log("requisição com async/await",json);
+            }catch(error){
+                console.error("Houve algum erro ao consultar a API"+error)
+            }         
+        }
+        carregarComAsyncAwait();
+    </script>
+</body>
+</html>
