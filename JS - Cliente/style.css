@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    width: 49%;
+    flex: 1;
+    padding: 10px;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+}
+
+.content{
+    width: 90%px;
+    height: fit-content;
+    margin: 50px 0px;
+    background-color: #CCC;
+    padding: 50px;
+
+    border-radius: 20px;
+}
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.estilo{
+    border: 5px solid #000;
+    background-image:radial-gradient(ellipse at 45px,#ED145B,#f03e79);
+
+}
