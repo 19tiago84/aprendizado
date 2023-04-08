@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&family=Questrial&display=swap');
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	box-sizing: border-box;
+	height: 100vh;
+	background-color: white;
+}
+
+.fotoDavi{
+	width: 300px;
+}
+
+strong{
+	color: #B3905D;
+}
+
+.apresentacao{
+	margin: 10% 20%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.apresentacao__conteudo{
+	width: 600px;
+	background-color: #D1EBFF;
+	border-color: black;
+	border-radius: 10px;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.apresentacao__conteudo__titulo{
+	color: #1973B8;
+	font-size: 36px;
+	font-family: 'Questrial', sans-serif;
+
+}
+
+.apresentacao__conteudo__texto{
+	font-size: 24px;
+	font-family: 'Noticia Text', serif;
+}
+
+.apresentacao__links{
+	display: flex;
+	justify-content: space-between;
+}
+.apresentacao__links_link{
+	background-color: #1A73B8;
+	width: 250px;
+	text-align: center;
+	border-radius: 16px;
+	font-size: 20px;
+	padding: 10px;
+	text-decoration: none;
+	color: white;
+	font-family: sans-serif;
+}
